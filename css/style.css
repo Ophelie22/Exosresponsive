@@ -3,7 +3,7 @@
 body {
     background-color: #2f3848;
     margin: auto;
-    max-width: 500px;
+    max-width: 800px;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -246,7 +246,7 @@ img {
     /* si la largeur est inférieure à 600 pixels, alors ce code CSS s'applique */
     #gallery {
         flex-direction: column;
-        background-color: plum;
+        background-color: #004488;
     }
 
     #fotos,  #gallery aside {
@@ -256,7 +256,21 @@ img {
 
 @media (max-width: 432px) {
     /* si la largeur est inférieure à 432 pixels, alors ce code CSS s'applique */
-    #fotos {
-        background-color: white;
+    body {
+        
+        margin: auto;
+        text-align: center;
+        font-size: 10px;
+    }
+    h1{
+        font-size: 15px;
+    }
+   
+    nav{
+        display:block;
+    }
+    #main-nav {
+        font-size: 10px;
+   
     }
 }
