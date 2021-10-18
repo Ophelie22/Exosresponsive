@@ -102,9 +102,23 @@ nav ul {
 }
 
                     /*cameleonsgallery**/
+#fotos {
+    display: flex;
+}
+#fotos{
+    max-width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
-                    
-
+#fotos img {
+    /* calcul pour la largeur : 25% de l'espace disponible, puis on enlève
+    5px pour espacer des autres images*/
+    width: calc(25% - 5px);
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
 
 /***nav id****
 main-nav
