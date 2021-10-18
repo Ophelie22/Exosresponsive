@@ -101,15 +101,19 @@ nav ul {
     font-size: 1.2em;
 }
 
-                    /*cameleonsgallery**/
-#fotos {
+                    /* gallery */
+   
+#gallery{
     display: flex;
 }
+
+                    /*fotos**/
 #fotos{
     max-width: 70%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    font-size: 0;
 }
 
 #fotos img {
@@ -120,6 +124,17 @@ nav ul {
     margin-right: 5px;
 }
 
+/* on cible une image qui est l'ainée de ses frères et soeurs */
+/* #fotos img:first-child {*/
+/* plus costaud pour notre cas : on cible la première image */  
+#fotos img:first-of-type{
+    float: left;
+    width: calc(50% - 5px);
+    margin-right: 5px;
+}
+
+
+
 /***nav id****
 main-nav
 social-nav
@@ -127,7 +142,9 @@ social-nav
 /**** section id****
 presentation
 highlight
-cameleonsgallery**/
+ gallery 
+fotos
+
 
 
 
@@ -139,3 +156,5 @@ footer {
     padding: 20px;
     text-align: center;
 }
+footer p {
+    color: #60b9ce;
