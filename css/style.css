@@ -183,3 +183,80 @@ footer {
 footer p {
     color: #60b9ce;
 }
+
+/* animation pour faire battre le coeur : heartbeat = nom de l'animation */
+/* définition de l'animation */
+@keyframes heartbeat {
+    /* point de départ */
+    from {
+        opacity: 0; /* transparent */
+    }
+    /* arrivée */
+    to {
+        opacity: 2; /* opaque */
+    }
+}
+
+/* utilisation de l'animation sur un élément */
+.heart {
+    /* enlever le commentaire pour avoir l'animation */
+    /* animation-name: heartbeat; */
+    animation-duration: 1s;
+    /* animation-iteration-count: 5; */
+    animation-iteration-count: infinite;
+    animation-direction: alternate; /* de 0 à 1 puis de 1 à 0 */
+}
+
+/* animation pour faire tourner les couleurs */
+@keyframes couleurs-magiques {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/filter */
+    from {
+        filter: hue-rotate(0);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+img {
+    /* enlever le commentaire pour avoir l'animation */
+    /* animation-name: couleurs-magiques; */
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out; /* accélération par moments */
+}
+
+/*body {
+    animation-name: couleurs-magiques;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}*/
+
+/* on applique une transformation pour que toutes les images soient à l'envers */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/transform */
+
+    /* transform: rotate(0.5turn); */
+
+
+/* media queries : définir des breakpoints, pour changer l'affichage */
+@media (max-width: 600px) {
+    /* si la largeur est inférieure à 600 pixels, alors ce code CSS s'applique */
+    #gallery {
+        flex-direction: column;
+        background-color: plum;
+    }
+
+    #fotos,  #gallery aside {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 432px) {
+    /* si la largeur est inférieure à 432 pixels, alors ce code CSS s'applique */
+    #fotos {
+        background-color: white;
+    }
+}
