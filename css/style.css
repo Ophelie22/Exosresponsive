@@ -17,9 +17,20 @@ h2 {
 
 a {
     color: yellowgreen; /*code couleur  demande*/
+
+/* transition : permet de rendre progressif les changements sur la 
+    propriété CSS indiquée, ici quand la couleur change sur un a, au bout d'un
+    délai de 0.5seconde, le changement de couleur est progressif sur 2 secondes */
+    /* transition: color 2s .5s;*/
+    /* sans délai */
+    transition: color 2s;
 }
 
-                            /* header */
+a:hover {
+    color: #f05768;
+}                            
+
+/* header */
 
 h1 {
     color: white;
@@ -105,12 +116,12 @@ nav ul {
    
 #gallery{
     display: flex;
+    padding-top: 50px;
 }
 
                     /*fotos**/
 #fotos{
     max-width: 70%;
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     font-size: 0;
@@ -120,8 +131,8 @@ nav ul {
     /* calcul pour la largeur : 25% de l'espace disponible, puis on enlève
     5px pour espacer des autres images*/
     width: calc(25% - 5px);
-    margin-bottom: 5px;
     margin-right: 5px;
+    margin-bottom: 5px; 
 }
 
 /* on cible une image qui est l'ainée de ses frères et soeurs */
@@ -129,26 +140,39 @@ nav ul {
 /* plus costaud pour notre cas : on cible la première image */  
 #fotos img:first-of-type{
     float: left;
-    width: calc(50% - 5px);
-    margin-right: 5px;
+    width: calc(50% - 5px); 
 }
 
-
-
-/***nav id****
-main-nav
-social-nav
-
-/**** section id****
-presentation
-highlight
- gallery 
-fotos
-
-
-
-
-
+/* cible la 15eme image */
+#fotos img:nth-last-of-type(15){
+    border: 2px solid red;
+    /* avec le dimensionnement standard : la bordure s'ajoute à la taille 
+    indiquée pour l'élément, du coup ici notre image d'iguane est trop grande
+    => on peut changer le dimensionnement des boîtes pour que la bordure soit
+    comprise dans la taille qu'on donne à l'élément */
+    box-sizing: border-box;
+}
+                
+                    /*section de gallery(aside) sur le cote et titre du block*/
+#gallery aside {
+    max-width: 30%;
+    background-color: #004488;
+    padding: 12px;
+    align-self: flex-start;
+    margin-left: 1em;
+}
+#gallery h3 {
+    color: #00ccff;
+    border-bottom: 1px solid #00ccff;
+    padding: 10px 0;
+    line-height: 1.25;
+}
+#gallery aside p {
+    color: yellowgreen;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.5;
+}
 
                                 /* footer */
 footer {
@@ -158,3 +182,4 @@ footer {
 }
 footer p {
     color: #60b9ce;
+}
