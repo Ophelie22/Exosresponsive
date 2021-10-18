@@ -19,7 +19,7 @@ a {
     color: yellowgreen; /*code couleur  demande*/
 }
 
-/* header */
+                            /* header */
 
 h1 {
     color: white;
@@ -71,8 +71,39 @@ nav ul {
     margin-left: 1em;
 }
   
+                    /* présentation **/
+#presentation p {
+    /* on augmente l'interligne pour la lisibilité */
+    line-height: 1.5;
+}
 
+                            /* highlight */
+#highlight img {
+    max-width: 100%;
+}
 
+#highlight {
+    /* sert de référence pour le positionnement absolu du titre */
+    position: relative;
+    margin-bottom: 1em;
+}
+
+#highlight h2 {
+    position: absolute;
+    /* par défaut on a top: 0 et left: 0 */
+    /*top: 0;
+    left: 0;*/
+    background-color: #f05768;
+    color: white;
+    margin: 0;
+    padding: 0.5em;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+                    /*cameleonsgallery**/
+
+                    
 
 
 /***nav id****
@@ -88,7 +119,7 @@ cameleonsgallery**/
 
 
 
-/* footer */
+                                /* footer */
 footer {
     margin-top: 40px;
     padding: 20px;
